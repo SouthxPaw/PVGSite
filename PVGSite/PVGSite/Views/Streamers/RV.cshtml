@@ -3,5 +3,56 @@
     ViewData["Title"] = "RV";
 }
 
-<h1>RV</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <!--USER AVI-->
+                <img src="~/images/RV.png" class="rounded-circle img-fluid mx-auto" alt="Randy" style="width:200px;height:200px;" />
+            </div>
 
+            <hr />
+
+            <div class="col-md-7">
+                <p class="lead">
+                    <!--USER TAG-->
+                    <h2 class="lead">
+                        <b>
+                            <u>
+                                RandyVelour
+                        </b></u>
+                    </h2>
+                    <!--About player info-->
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <p class="lead">
+                    <!--Social Media Links-->
+                    <a href="https://www.twitch.tv/randyvelour" class="fab fa-twitch fa-fw" target="_blank"></a>
+                    <a href="#" class="linkDisabled fab fa-twitter fa-fw" target="_blank"></a>
+                    <a href="#" class="linkDisabled fab fa-instagram fa-fw" target="_blank"></a>
+                    <a href="#" class="linkDisabled fab fa-youtube fa-fw" target="_blank"></a>
+                    <a href="#" class="linkDisabled fab fa-mixer fa-fw" target="_blank"></a>
+                </p>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="row">
+            <!-- Add a placeholder for the Twitch embed -->
+            <div id="twitch-embed" style="margin:auto;"></div>
+
+            <!-- Load the Twitch embed script -->
+            <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+            <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+            <script type="text/javascript">
+                new Twitch.Embed("twitch-embed", {
+                    width: 2000,
+                    height: 480,
+                    channel: "randyvelour"
+                });
+            </script>
+        </div>
+
+    </div>

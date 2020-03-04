@@ -25,25 +25,22 @@
                             <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">About Us</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white" id="navbardrop" data-toggle="dropdown">PVG Streamers</a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" asp-area="" asp-controller="Streamers" asp-action="awaken">awaken.</a>
-                                <a class="dropdown-item" asp-area="" asp-controller="Streamers" asp-action="woxdy">Woxdy</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Streamers" asp-action="woxdy">woxdy</a>
                                 <a class="dropdown-item" asp-area="" asp-controller="Streamers" asp-action="wingspan">Wingspan</a>
-                                <a class="dropdown-item" asp-area="" asp-controller="Streamers" asp-action="RV">Randy Velour</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Streamers" asp-action="RV">RandyVelour</a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Gaming Blog</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Blog" asp-action="Blog">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Tabletop Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Calendar</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Calendar" asp-action="Calendar">Calendar</a>
                         </li>
                     </ul>
                 </div>
@@ -58,7 +55,14 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2020 - PVGSite - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <span>
+                &copy; 2020 - PVG - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> - <a href="#">Back to top</a>
+            </span>
+            <span class="float-right">
+                <a href="https://twitter.com/intent/tweet?button_hashtag=positivevibesgang&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" style="float:right" data-show-count="false">Tweet #positivevibesgang</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+            </span>
+            
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
