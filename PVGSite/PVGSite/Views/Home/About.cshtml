@@ -1,4 +1,5 @@
-﻿
+﻿@model AboutViewModel
+
 @{
     ViewData["Title"] = "About Us";
 }
@@ -26,6 +27,8 @@
 <br />
 <br />
 
+
+
 <!--FOUNDER-->
 <div class="row">
     <div class="col">
@@ -34,31 +37,31 @@
 </div>
 <div class="row">
     <div class="col-md-2">
-        <!--AWAKEN USER AVI-->
-        <img src="~/images/awakentwitch.png" class="rounded-circle img-fluid mx-auto" alt="awaken." style="width:100px;height:100px;" />
+        <!--USER AVI-->
+        <img src="@Model.Founder.Avi" class="rounded-circle img-fluid mx-auto" alt="awaken." style="width:100px;height:100px;" />
     </div>
     <div class="col-md-7">
         <!--USER TAG-->
         <p class="lead">
-            Tag: awaken.
+            Tag: @Model.Founder.Tag
         </p>
         <!--MAINS-->
-        <p class="lead">Main(s): Peach, Daisy</p>
+        <p class="lead">
+            Main: <img src="@Model.Founder.Main" alt="peach" style="width:50px;height:50px;" />
+        </p>
         <!--DISCORD-->
-        <p class="lead"><i class="fab fa-discord"></i> awaken.#6752</p>
+        <p class="lead"><i class="fab fa-discord"></i> @Model.Founder.Discord</p>
         <p class="lead">
             <!--About player info-->
-            Hi everyone, I'm awaken, founder of PVG - I am passionate about bringing people together and creating a
-            space for positivity where people's talents can shine and we can have some fun together while
-            spreading and sharing the grind of blah blah blah
+            @Model.Founder.AboutMe
         </p>
         <p class="lead">
             <!--Links for social media-->
-            <a href="https://twitch.tv/awakenssbu" class="fab fa-twitch fa-fw" target="_blank"></a>
-            <a href="https://twitter.com/awaken_ssb" class="fab fa-twitter fa-fw" target="_blank"></a>
-            <a href="https://www.instagram.com/awaken.ssbu/" class="fab fa-instagram fa-fw" target="_blank"></a>
-            <a href="#" class="linkDisabled fab fa-youtube fa-fw" target="_blank"></a>
-            <a href="#" class="linkDisabled fab fa-mixer fa-fw" target="_blank"></a>
+            <a href="@Model.Founder.Twitch" class="fab fa-twitch fa-fw" target="_blank"></a>
+            <a href="@Model.Founder.Twitter" class="fab fa-twitter fa-fw" target="_blank"></a>
+            <a href="@Model.Founder.Instagram" class="fab fa-instagram fa-fw" target="_blank"></a>
+            <a href="@Model.Founder.Youtube" class="fab fa-youtube fa-fw" target="_blank"></a>
+            <a href="@Model.Founder.Mixer" class="fab fa-mixer fa-fw" target="_blank"></a>
         </p>
     </div>
 </div>
@@ -71,96 +74,49 @@
 <br />
 <br />
 
+
+
 <!--MODS-->
 <div class="row">
     <div class="col">
         <h1 style="text-align:center"><u>THE MODS</u></h1>
     </div>
 </div>
+
+@foreach (var mods in Model.Mods)
+{
+
 <div class="row">
     <div class="col-md-2">
-        <!--ENDER1241 USER AVI-->
-        <img src="~/images/Ender.png" class="rounded-circle img-fluid mx-auto" alt="Ender1241" style="width:100px;height:100px;" />
+        <!--USER AVI-->
+        <img src= "@mods.Avi" class="rounded-circle img-fluid mx-auto" alt="mods avi" style="width:100px;height:100px;" />
     </div>
     <div class="col-md-7">
         <!--USER TAG-->
         <p class="lead">
-            Tag: Ender1241
+            Tag: @mods.Tag
         </p>
         <!--MAINS-->
-        <p class="lead">Main(s): Zelda</p>
+        <p class="lead">
+            Main: <img src="@mods.Main" alt="mods mains" style="width:50px;height:50px;" />
+        </p>
         <!--DISCORD-->
-        <p class="lead"><i class="fab fa-discord"></i> Ender1241#9299</p>
+        <p class="lead"><i class="fab fa-discord"></i> @mods.Discord</p>
         <p class="lead">
             <!--About player info-->
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            @mods.AboutMe
         </p>
         <p class="lead">
             <!--Social Media Links-->
-            <a href="#" class="linkDisabled fab fa-twitch fa-fw" target="_blank"></a>
-            <a href="https://twitter.com/1241_ssbu" class="fab fa-twitter fa-fw" target="_blank"></a>
-            <a href="#" class="linkDisabled fab fa-instagram fa-fw" target="_blank"></a>
-            <a href="#" class="linkDisabled fab fa-youtube fa-fw" target="_blank"></a>
-            <a href="#" class="linkDisabled fab fa-mixer fa-fw" target="_blank"></a>
+            <a href="@mods.Twitch" class="fab fa-twitch fa-fw" target="_blank"></a>
+            <a href="@mods.Twitter" class="fab fa-twitter fa-fw" target="_blank"></a>
+            <a href="@mods.Instagram" class="fab fa-instagram fa-fw" target="_blank"></a>
+            <a href="@mods.Youtube" class="fab fa-youtube fa-fw" target="_blank"></a>
+            <a href="@mods.Mixer" class="fab fa-mixer fa-fw" target="_blank"></a>
         </p>
     </div>
 </div>
-<div class="row">
-    <div class="col-md-2">
-        <!--EZ USER AVI-->
-        <img src="~/images/ez.jpg" class="rounded-circle img-fluid mx-auto" alt="ez" style="width:100px;height:100px;" />
-    </div>
-    <div class="col-md-7">
-        <!--USER TAG-->
-        <p class="lead">
-            Tag: ez
-        </p>
-        <!--MAINS-->
-        <p class="lead">Main(s): Megaman, Ridley</p>
-        <!--DISCORD-->
-        <p class="lead"><i class="fab fa-discord"></i> ez#3274</p>
-        <p class="lead">
-            <!--About player info-->
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <p class="lead">
-            <!--Social Media Links-->
-            <a href="#" class="linkDisabled fab fa-twitch fa-fw" target="_blank"></a>
-            <a href="#" class="linkDisabled fab fa-twitter fa-fw" target="_blank"></a>
-            <a href="#" class="linkDisabled fab fa-instagram fa-fw" target="_blank"></a>
-            <a href="#" class="linkDisabled fab fa-youtube fa-fw" target="_blank"></a>
-            <a href="#" class="linkDisabled fab fa-mixer fa-fw" target="_blank"></a>
-        </p>
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-2">
-        <!--WOXDY USER AVI-->
-        <img src="~/images/woxdy.png" class="rounded-circle img-fluid mx-auto" alt="woxdy" style="width:100px;height:100px;" />
-    </div>
-    <div class="col-md-7">
-        <!--USER TAG-->
-         <p class="lead">
-             Tag: woxdy
-         </p>
-        <!--MAINS-->
-        <p class="lead">Main(s): Lucina</p>
-        <!--DISCORD-->
-        <p class="lead"><i class="fab fa-discord"></i> woxdy#3897</p>
-        <p class="lead">
-            <!--About player info-->
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <p class="lead">
-            <!--Social Media Links-->
-            <a href="#" class="linkDisabled fab fa-twitch fa-fw" target="_blank">
-                <a href="https://twitter.com/woxdy" class="fab fa-twitter fa-fw" target="_blank"></a>
-                <a href="#" class="linkDisabled fab fa-instagram fa-fw" target="_blank"></a>
-                <a href="https://www.youtube.com/woxdy" class="fab fa-youtube fa-fw" target="_blank"></a>
-                <a href="https://mixer.com/woxdy" class="fab fa-mixer fa-fw" target="_blank"></a>
-</p>
-    </div>
-</div>
+}
 
 <br />
 <br />
@@ -176,58 +132,39 @@
         <h1 style="text-align:center"><u>THE VOICES</u></h1>
     </div>
 </div>
+
+@foreach (var voices in Model.Voices)
+{
+
 <div class="row">
     <div class="col-md-2">
-        <!--TRIEAZON USER AVI-->
-        <img src="~/images/Trieazon.png" class="rounded-circle img-fluid mx-auto" alt="=Trieazon" style="width:100px;height:100px;" />
+        <!--USER AVI-->
+        <img src= "@voices.Avi" class="rounded-circle img-fluid mx-auto" alt="voices avi" style="width:100px;height:100px;" />
     </div>
     <div class="col-md-7">
         <!--USER TAG-->
         <p class="lead">
-            Tag: TrieaZon
+            Tag: @voices.Tag
         </p>
         <!--Mains-->
-        <p class="lead">Main(s): Cloud</p>
+        <p class="lead">
+            Main(s): <img src= "@voices.Main" alt="voices main" style="width:50px;height:50px;" />
+        </p>
         <!--About player info-->
         <p class="lead">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            @voices.AboutMe
         </p>
         <p class="lead">
             <!--Social Media Links-->
-            <a href="#" class="linkDisabled fab fa-twitch fa-fw" target="_blank"></a>
-            <a href="#" class="linkDisabled fab fa-twitter fa-fw" target="_blank"></a>
-            <a href="#" class="linkDisabled fab fa-instagram fa-fw" target="_blank"></a>
-            <a href="#" class="linkDisabled fab fa-youtube fa-fw" target="_blank"></a>
-            <a href="#" class="linkDisabled fab fa-mixer fa-fw" target="_blank"></a>
+            <a href="@voices.Twitch" class="fab fa-twitch fa-fw" target="_blank"></a>
+            <a href="@voices.Twitter" class="fab fa-twitter fa-fw" target="_blank"></a>
+            <a href="@voices.Instagram" class="fab fa-instagram fa-fw" target="_blank"></a>
+            <a href="@voices.Youtube" class="fab fa-youtube fa-fw" target="_blank"></a>
+            <a href="@voices.Mixer" class="fab fa-mixer fa-fw" target="_blank"></a>
         </p>
     </div>
 </div>
-<div class="row">
-    <div class="col-md-2">
-        <!--MOUS USER AVI-->
-        <img src="~/images/Mous.png" class="rounded-circle img-fluid mx-auto" alt="Mous" style="width:100px;height:100px;" />
-    </div>
-    <div class="col-md-7">
-        <!--USER TAG-->
-        <p class="lead">
-            Tag: Mous
-        </p>
-        <!--Mains-->
-        <p class="lead">Main(s): Pokemon Trainer, Random</p>
-        <p class="lead">
-            <!--About player info-->
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <p class="lead">
-            <!--Social Media Links-->
-            <a href="#" class="linkDisabled fab fa-twitch fa-fw" target="_blank"></a>
-            <a href="#" class="linkDisabled fab fa-twitter fa-fw" target="_blank"></a>
-            <a href="#" class="linkDisabled fab fa-instagram fa-fw" target="_blank"></a>
-            <a href="#" class="linkDisabled fab fa-youtube fa-fw" target="_blank"></a>
-            <a href="#" class="linkDisabled fab fa-mixer fa-fw" target="_blank"></a>
-        </p>
-    </div>
-</div>
+}
 
 <br />
 <br />

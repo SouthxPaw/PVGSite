@@ -113,3 +113,5 @@ C:\Users\jorda\OneDrive\Desktop\PVGsite\PVGSite\PVGSite\obj\Debug\netcoreapp3.1\
 C:\Users\jorda\OneDrive\Desktop\PVGsite\PVGSite\PVGSite\obj\Debug\netcoreapp3.1\Razor\Views\Calendar\Calendar.cshtml.g.cs
 C:\Users\jorda\OneDrive\Desktop\PVGsite\PVGSite\PVGSite\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Blog.cshtml.g.cs
 C:\Users\jorda\OneDrive\Desktop\PVGsite\PVGSite\PVGSite\obj\Debug\netcoreapp3.1\Razor\Views\Home\About.cshtml.g.cs
+C:\Users\jorda\OneDrive\Desktop\PVGsite\PVGSite\PVGSite\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\jorda\OneDrive\Desktop\PVGsite\PVGSite\PVGSite\obj\Debug\netcoreapp3.1\Razor\Views\Account\Verify.cshtml.g.cs
